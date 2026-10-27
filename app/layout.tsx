@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cormorant_Garamond, Gowun_Dodum } from "next/font/google";
 import "./globals.css";
 import ScrollReveal from "./ScrollReveal";
@@ -21,6 +22,10 @@ const gowunDodum = Gowun_Dodum({
 export const metadata: Metadata = {
   title: "Dear By Pet",
   description: "Dear By Pet",
+  other: {
+    "naver-site-verification":
+      "cfafdabd9d9cf00ecc4efa11b4cf854353e0cdeb",
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +41,21 @@ export default function RootLayout({
       <body>
         {children}
         <ScrollReveal />
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7959GN0YBE"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7959GN0YBE');
+          `}
+        </Script>
       </body>
     </html>
   );
