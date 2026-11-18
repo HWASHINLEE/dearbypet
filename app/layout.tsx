@@ -20,6 +20,10 @@ const gowunDodum = Gowun_Dodum({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dearbypet.com"),
+  alternates: {
+    canonical: "./",
+  },
   title: "Dear By Pet",
   description: "Dear By Pet",
   other: {
