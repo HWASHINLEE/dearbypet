@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   description: "Dear By Pet",
   other: {
     "naver-site-verification":
-      "cfafdabd9d9cf00ecc4efa11b4cf854353e0cdeb",
+      ["cfafdabd9d9cf00ecc4efa11b4cf854353e0cdeb", "25b998d14db5f2ebfafc256abf5ceec665f69ba1"],
   },
 };
 
